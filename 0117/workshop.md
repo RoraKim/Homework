@@ -13,6 +13,13 @@ for i in range(1, num + 1):
     print(i)
 ```
 
+``` python
+#항상 정수로 입력받는 건 아닐 수 있다.
+정수를 입력해주세요 : 십, ten...
+
+먼저 입력 받은 다음에 내가 원하는 형식에 맞는지 유효성 검사를 해보자
+```
+
 ----
 
 
@@ -47,5 +54,19 @@ sum = 0
 for i in range(1, num + 1):
     sum = sum + i
 print(sum)
+```
+
+``` python
+# 값 입력 받기 
+number = int(input())
+
+#출력 할 최종 값
+result = 0
+for i in range(1, number +1)
+result += i
+```
+
+``` python
+print(sum(range(1,number + 1)))
 ```
 

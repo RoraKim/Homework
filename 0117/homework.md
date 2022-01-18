@@ -69,7 +69,7 @@ print('안녕, {}야'.format(name))
 
 ``` python
 #정수 형식이 아닌 경우 타입 변환할 수 없음
-int('3.5') + 5
+int('3.5') # 5
 ```
 
 ---
@@ -88,6 +88,14 @@ m = 9
 width = '*'*int(n)
 print((width + '\n') * int(m))
 ```
+
+``` python
+
+```
+
+
+
+
 
 ---
 
@@ -120,7 +128,12 @@ root = int(b) ** 2 - 4 * int(a) * int(c)
 upper_plus = -b + int(root ** 0.5)
 upper_minus = -b - int(root ** 0.5)
 
-print(int(upper_plus/2 * int(a)))
-print(int(upper_minus/2 * int(a)))
+print(int(upper_plus/(2 * int(a))))
+print(int(upper_minus/(2 * int(a)))
+```
+
+``` python
+(-b + (b ** 2 - 4 * a * c) ** (1/2)) / (2*a)
+(-b - (b ** 2 - 4 * a * C) ** (1/2)) / (2*a)
 ```
 
