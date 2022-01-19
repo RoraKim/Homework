@@ -119,8 +119,8 @@ def my_avg(*args):
     count=0
     total=0
     for score in args:
-        count+=count
-        total+=count
+        count = count + 1
+        total = score + total 
     return total/count
 
 my_avg(77, 83, 95, 80, 70)
