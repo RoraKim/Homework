@@ -5,7 +5,7 @@
 
 
 ``` python
-sum(), add(), print(), type(), range()
+sum(), min(), print(), type(), range()
 ```
 
 
@@ -45,6 +45,32 @@ def get_middle_char(word):
         return(word[len(word)//2-1:len(word)//2+1])
 ```
 
+``` python
+def get_middle_char(word):
+    length = 0 
+    for i in word:
+        #한개씩 개수를 세어보자 
+    length += 1
+
+    center = length // 2
+
+    #만약 홀수라면
+        if length % 2:
+             result = word[center]
+
+
+
+    #짝수라면
+        if length % 2:
+            result = word[center-1] + [center]
+            result = word[center -1:center+1]
+
+
+
+get_middle_char('ssafy') #=> a
+get_middle_char('coding')#=>di
+```
+
 
 
 ----
@@ -71,7 +97,13 @@ ssafy(location='대전', name='철수')
 ssafy('영희', location='광주')
 
 # (4)
-ssaft(name='길동', '구미') #오류가 발생
+ssafy(name='길동', '구미') #오류가 발생
+```
+
+``` python
+# (4)
+ssafy(name='길동', '구미') #오류가 발생
+- 키워드 인자를 사용한 뒤에는 위치 인자를 사용할 수 없다.
 ```
 
 
