@@ -25,8 +25,6 @@ def count_vowels(word):
 
 
 
-
-
 ------
 
 
@@ -46,7 +44,7 @@ def count_vowels(word):
 ```
 
 ``` 
-(4)번
+(4)번 .strip([chars])는 특정 문자를 지정하지 않으면 공백을(개행문자)제거한다.
 ```
 
 
@@ -72,6 +70,24 @@ def only_square_area(a,b):
 
 ``` python
 def only_square_area(widths,heights):
+    #리스트 컴프리헨션 
+    #리스트에 최종적으로 추가할 값 + 반복문 순서대로 + 조건
     comb = [width * height for width in widths for height in heights if width == height]
+    
+    return comb
+```
+
+``` python
+#정사각형이란 건 결국 높이와 너비가 같다는 뜻 
+#그 말은 두 리스트를 비교했을 때 중복되는 값만 찾으면 된다...
+value = set(widths) & set(heights)
+result = []
+	for val in value:
+        result.append(val**2)
+return result
+```
+
+``` python
+return[val**2 fir val in set(widths) & set(heights)]
 ```
 
