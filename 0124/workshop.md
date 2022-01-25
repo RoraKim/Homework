@@ -13,7 +13,7 @@ get_dict_avg({
 
 ``` python
 def get_dict_avg(a):
-    sum = 0
+    add = 0
     count = 0
     for val in a.values():
         add += int(val)
@@ -52,5 +52,38 @@ count_blood([
     'A', 'B', 'A', 'O', 'AB', 'AB',
     'O', 'A', 'B', 'O', 'B', 'AB',
 ])
+```
+
+``` python
+def count_blood(blood):
+    li = []
+    
+    for i in blood :
+        li.append(i)
+        
+    idx = list(set(li))
+    
+    cnt = {}
+    for i in idx :
+        cnt[i] = blood.count(i)
+        
+    return cnt   
+```
+
+``` python
+def count_blood(bloods):
+    blood_dict = {}
+    for blood in bloods:
+        #blood_dict['key'] - 에러 
+        #blood_dict.get() - none
+        if blood_dict.get(blood):
+            blood_dict[blood] += 1
+    
+            
+        else:
+            blood_dict[blood] = 1
+    return blood_dict
+        
+        
 ```
 

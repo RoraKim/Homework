@@ -11,11 +11,16 @@ count_vowels('banana')
 
 ``` python
 def count_vowels(a):
-    a.count('a')
-    a.count('e')
-    a.count('i')
-    a.count('o')
-    a.count('u')
+    result = a.count('a') + a.count('e') + a.count('i') + a.count('o') + a.count('u')
+    return(a)
+```
+
+``` python
+def count_vowels(word):
+    result = 0
+    for i in 'aeiou':
+        result += word.count(i)
+    return result
 ```
 
 
@@ -40,6 +45,10 @@ def count_vowels(a):
 (4) .strip([chars])은 특정 문자를 지정하면, 양쪽에서 해당 문자를 찾아 제거한다. 특정 문자를 지정하지 않으면 오류가 발생한다.
 ```
 
+``` 
+(4)번
+```
+
 
 
 ### 3. 정사각형만 만들기
@@ -58,8 +67,11 @@ def only_square_area(a,b):
             if i == j:
                 my_list.append(i*j)
     
-    return my_list
+    return my_list            
+```
 
-                
+``` python
+def only_square_area(widths,heights):
+    comb = [width * height for width in widths for height in heights if width == height]
 ```
 
