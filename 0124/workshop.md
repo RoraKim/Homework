@@ -87,3 +87,21 @@ def count_blood(bloods):
         
 ```
 
+``` python
+def count_blood(blood):
+    #안에 있는 각 값들에 해당하는 
+    #키를 가진 딕셔너리를 만들고
+    #그 키에 해당하는 값들을 채워 나가야 한다. 
+    result = {}
+    #전체 리스트 반복문 돌려서 
+    for val in blood:
+        #만약에 result에 해당하는 키 값이 있다면 +1
+        if result[val]#=> 대괄호 접근의 경우...
+        	#값이 없더라도 키에러가 발생하지 않도록
+            if result.get(val):
+        	result[val] += 1
+            #없으면? 최초로 할당
+            else:
+                result[val] = 1 #값을 뭘 넣어야 할까?
+```
+
