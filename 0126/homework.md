@@ -3,37 +3,27 @@
 ####  Python은 객체 지향 프로그래밍 언어이다. Python에서 기본적으로 정의되어 있는 클래스를 최소 5가지 이상 작성하시오.
 
 ``` python
-int
-str
-list
-tuple
-dict
-float
-complex
-map
+int, str, list, tuple, dict, float, complex, map, zip
 ```
 
 
 
-
-
-
-
-
-
-
-
-
+----
 
 ### 2. Magic Method 
 
 #### 아래에 제시된 매직 메서드들이 각각 어떠한 역할을 하는지 간단하게 작성하시오.
 
 ``` python
---init--
---del--
---str--
---repr--
+--init-- : 생성자(인스턴스가 생성될 때 실행)
+--del-- : 소멸자(인스턴스가 소멸될 때 실행)
+--str-- : 
+    사람이 보기 좋게 출력
+    str(Object),format(),print()에 의해서 호출되는 방식
+--repr-- : 
+    기계 혹은 개발자가 보기 좋게 출력
+    디버깅에 사용되기 때문에, 조금 더 많은 정보를 담은 형태로 출력
+    
 ```
 
 
@@ -54,17 +44,17 @@ map
 .index()
 .update()
 .replace(old, new)
+
+list : append, pop, remove
+str : split, join, power
+dict : get, update
 ```
 
 
 
 
 
-
-
-
-
-
+----
 
 ### 4. Module Import
 

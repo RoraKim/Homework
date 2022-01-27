@@ -72,7 +72,7 @@ True
 ``` python
 class Point:
     def __init__(self, a, b):
-        self.x = x
+        self.x = a
         self.y = b
         
 class Rectangle:
@@ -90,5 +90,43 @@ print(p1.x)
         
     #def __str__(self):
         #return self.name
+```
+
+``` python
+class Point:
+
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+
+
+class Rectangle:
+
+    def __init__(self, p1, p2):
+        self.p1 = p1
+        self.p2 = p2
+
+    def get_area(self):
+        self.width = abs(self.p1.x - self.p2.x)
+        self.height = abs(self.p1.y - self.p2.y)
+        return self.width * self.height
+
+    def get_perimeter(self):
+        return (self.width + self.height) * 2
+
+    def is_square(self):
+        return self.width == self.height
+```
+
+```python
+#값 
+
+4
+8
+True
+9
+12
+True
 ```
 
