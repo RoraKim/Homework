@@ -1,6 +1,6 @@
+# WorkShop
 
-
-\#. 도형 만들기 아래의 명세를 읽고 Python 클래스를 활용하여 점(Point)과 사각형(Rectangle)을 표현하시오.
+### 도형 만들기 아래의 명세를 읽고 Python 클래스를 활용하여 점(Point)과 사각형(Rectangle)을 표현하시오.
 
 Point 클래스에 대한 명세는 다음과 같다.
 
@@ -43,7 +43,7 @@ Rectangle 클래스에 대한 명세는 다음과 같다.
 
 ``` python
 p1 = Point(1, 3)
-p2 = point(3, 1)
+p2 = Point(3, 1)
 r1 = Rectangle(p1, p2)
 print(r1.get_area())
 print(r1.get_perimeter())

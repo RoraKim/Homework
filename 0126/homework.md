@@ -23,12 +23,18 @@ int, str, list, tuple, dict, float, complex, map, zip
 --repr-- : 
     기계 혹은 개발자가 보기 좋게 출력
     디버깅에 사용되기 때문에, 조금 더 많은 정보를 담은 형태로 출력
-    
 ```
 
+### \__str__과 \_\_repr\_\_
 
+``` python
+from datetime import datetime
+now = datetime.now()
 
+print(str(now)) #2022-02-02 18:07:16.513325
 
+print(repr(now)) #datetime.datetime(2022, 2, 2, 18, 7, 16, 513325)
+```
 
 
 
@@ -36,7 +42,7 @@ int, str, list, tuple, dict, float, complex, map, zip
 
 ### 3. Instance Method
 
-####  sort()와 같이 문자열, 리스트, 딕셔너리 등을 조작 할 때 사용하였던 것들은 클래스에 정의된 메서드들이었다. 이처럼 문자열, 리스트, 딕셔너리 등을 조작하는 메서드를 최소 3가지 이상 그 역할과 함께 작성하시오.
+####  .sort()와 같이 문자열, 리스트, 딕셔너리 등을 조작 할 때 사용하였던 것들은 클래스에 정의된 메서드들이었다. 이처럼 문자열, 리스트, 딕셔너리 등을 조작하는 메서드를 최소 3가지 이상 그 역할과 함께 작성하시오.
 
 
 
@@ -84,3 +90,4 @@ recursion(4)
 
 ``` py
 from fibo import fibo_recursion as recursion
+```
