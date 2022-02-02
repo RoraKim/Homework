@@ -99,25 +99,64 @@ class Point:
         self.x = x
         self.y = y
 
-
-
 class Rectangle:
-
+    
     def __init__(self, p1, p2):
         self.p1 = p1
         self.p2 = p2
 
     def get_area(self):
-        self.width = abs(self.p1.x - self.p2.x)
-        self.height = abs(self.p1.y - self.p2.y)
-        return self.width * self.height
+        width = abs(p1.x - p2.x)
+        height = abs(p1.y - p2.y)
+        return int(width * height)
 
     def get_perimeter(self):
-        return (self.width + self.height) * 2
+        width = abs(p1.x - p2.x)
+        height = abs(p1.y - p2.y)
+        return 2 * int(width + height)
 
     def is_square(self):
-        return self.width == self.height
+        width = abs(p1.x - p2.x)
+        height = abs(p1.y - p2.y)
+        if width == height:
+            return True
+        else:
+            return False
+        
+#반복되는 width, height 정의를 init으로 옮겨주자
 ```
+
+
+
+``` python
+class Point:
+
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+class Rectangle:
+    
+    def __init__(self, p1, p2):
+        self.p1 = p1
+        self.p2 = p2
+        width = abs(p1.x - p2.x)
+        height = abs(p1.y - p2.y)
+
+    def get_area(self):
+        return int(width * height)
+
+    def get_perimeter(self):
+        return 2 * int(width + height)
+
+    def is_square(self):
+        if width == height:
+            return True
+        else:
+            return False
+```
+
+
 
 ```python
 #값 
