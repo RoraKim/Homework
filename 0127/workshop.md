@@ -11,6 +11,11 @@ Faker는 개발시 활용할 수 있는 가상의 데이터를 생성해주는 �
 $ pip install faker
 ```
 
+``` python
+faker라는 패키지를 설치하기 위한 명령어 
+git bash(terminal)에서 실행하는 명령어
+```
+
 
 
 ### Basic Usages(https://github.com/joke2k/faker#basic-usage)
@@ -23,7 +28,11 @@ fake = Faker() 			# 2 Faker는 ____, fake는 _____이다.
 fake.name()				# 3 name()은 fake의 ____이다.
 ```
 
-
+``` python
+Faker 클래스를 faker패키지에서 불러온다 
+Faker클래스에 fake이라는 인스턴스 생성
+name은 fake의 메서드 
+```
 
 ###  Localization(https://github.com/joke2k/faker#localization)
 
@@ -59,6 +68,12 @@ Faker는 다양한 언어의 Locale을 지원한다.
           pass
   ```
 
+``` python
+a = init
+b = self
+c = locale='en_US'
+```
+
 
 
 ### Seeding the Generator(https://github.com/joke2k/faker#seeding-the-generator)
@@ -71,10 +86,10 @@ import random
 random.random() # => 임의의 수
 random.random() # => 임의의 수
 
-random.sedd(7777)
+random.seed(7777)
 random.random() # => 0.xxx
 
-random.sedd(7777)
+random.seed(7777)
 random.random() # => 0.xxxx
 ```
 
@@ -87,10 +102,10 @@ random.random() # => 0.xxxx
 fake = Faker('ko_KR')
 Faker.seed(4321)
 
-print(fake.name()) 	# 1
+print(fake.name()) 	# 1 이도윤
 
 fake2 = Faker('ko_KR')
-print(fake2.name())	# 2
+print(fake2.name())	# 2 이지후
 ```
 
 
@@ -101,12 +116,12 @@ print(fake2.name())	# 2
 
 ```python
 fake = Faker('ko_KR')
-fake.sedd_instance(4321)
+fake.seed_instance(4321)
 
-print(fake.name)	# 1
+print(fake.name())	# 1 이도윤
 
 fake2 = Faker('ko_KR')
-print(fake2.name())	# 2
+print(fake2.name())	# 2 장성호
 ```
 
 seed()와 seed_instance()는 각각 어떠한 용도로 쓰일 수 있는지 작성하시오.

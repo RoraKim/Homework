@@ -23,6 +23,12 @@ class Circle:
         return (self.x, self.y)
 ```
 
+``` python
+C1 = Circle(3, 2, 4)
+print(C1.area()) #28.259999999999998
+print(C1.circumference()) #18.84
+```
+
 
 
 ### Dog과 Bird는 Animal이다
@@ -52,6 +58,32 @@ bird.eat() # 구구! 먹는다!
 bird.fly() # 구구! 푸드덕!
 ```
 
+``` python
+class Animal:
+    def __init__(self, name):
+        self.name = name
+        
+    def walk(self):
+        print(f'{self.name}! 걷는다!')
+        
+    def eat(self):
+        print(f'{self.name}! 먹는다!')
+
+
+class Dog(Animal):
+
+    def walk(self):
+        print(f'{self.name}! 달린다!')
+
+    def bark(self):
+        print(f'{self.name}! 짖는다!')
+
+class Bird(Animal):
+
+    def fly(self):
+        print(f'{self.name}! 푸드덕!')
+```
+
 
 
 
@@ -61,7 +93,19 @@ bird.fly() # 구구! 푸드덕!
 아래에 제시된 오류들이 각각 어떠한 경우에 발생하는지 간단하게 작성하시오.
 
 ```python
-ZeroDivisionError, NameError, TypeError, IndexError,
-KeyError, ModuleNotFoundError, ImportError
+ZeroDivisionError: 0으로 나누려고 할 때
+    
+NameError: 정의 되지 않은 변수이름 사용
+    
+TypeError: 자료형에 대한 잘못된 사용 
+    int('3') == 3
+    int([123]) TypeError
+    
+IndexError: 인덱스 범위를 초과해서 조회하고자 할 때
+KeyError: 딕셔너리에 없는 키를 조회하고자 할 때, 혹은 세트에 없는 값 삭제하거나 조회하려고 할 때
+    
+ModuleNotFoundError: 모듈을 찾을 수 없을 때 
+    
+ImportError: 모듈은 있는데 모듈에 없는 변수/클래스/함수를 찾고자 할 때
 ```
 
