@@ -20,18 +20,20 @@ HTML이란 Hyper Text Markup Language의 약자이다. 이는 웹페이지를 �
 
 ``` 
 1) 웹 표준을 만드는 곳은 Mozilla 재단이다. F
+W3C와 WHATWG가 만든다. 이제는 WHATWG에 주도권이 있다. 
 WHATWG에서 HTML Living Standard를 만든다. 
 
-2) 표(table) 을 만들 때에는 반드시 태그를 사용해야 한다. T
-표의 시작은 <table>로 해서 </table>로 마무리 짓는다. 
+2) 표(table) 을 만들 때에는 반드시 <th>태그를 사용해야 한다. F
+반드시 th 태그를 사용할 필요는 없다. 
 
 3) 제목(Heading) 태그는 제목 이외에는 사용하지 않는 것이 좋다. T 
-시멘틱 웹의 의미를 살려서 제목 이외에는 사용하지 않는 것이 좋다. 검색엔진은 제목 태그를 중요한 의미로 받아들일 간으성이 크다. 
+시멘틱 웹의 의미를 살려서 제목 이외에는 사용하지 않는 것이 좋다. 검색엔진은 제목 태그를 중요한 의미로 받아들일 가능성이 크다. 
 
-4) 리스트를 나열하기 위해서는 태그만 사용 할 수 있다. T
+4) 리스트를 나열하기 위해서는 태그만 사용 할 수 있다. F
+ol, ul 모두 사용할 수 있고 각 리스트 아이템들은 li 태그를 사용해서 나타낸다. 
 
 5) HTML의 태그는 반드시 별도의 닫는 태그가 필요하다. F 
-<br>, <p>
+여는태그와 닫는태그가 한 쌍인 태그와, 별도의 닫는 태그가 필요 없는 태그도 있다. <br>, <p>
 ```
 
 
@@ -69,15 +71,16 @@ WHATWG에서 HTML Living Standard를 만든다.
 1) HTML과 CSS는 각자 문법을 갖는 별개의 언어이다. T
 
 2) 웹 브라우저는 내장 기본 스타일이 있어 CSS가 없어도 작동한다. T
+- user agent stylesheets
 
 3) 자식 요소 프로퍼티는 부모의 프로퍼티를 모두 상속 받는다. F
 상속되는 것 : Text관련 요소(font, color, text-allign), opacity, visibility 등
-상속되지 않는 것 : Box model 관련 요소)width, height, margin, padding, border, box-sizing, display), position 관련 요소(position, top/right/bottom/left,z-index)
+상속되지 않는 것 : Box model 관련 요소(width, height, margin, padding, border, box-sizing, display), position 관련 요소(position, top/right/bottom/left,z-index)
 
-4) 디바이스마다 화면의 크기가 다른 것을 고려하여 상대 단위인 %를 사용한다.
+4) 디바이스마다 화면의 크기가 다른 것을 고려하여 상대 단위인 %를 사용한다.F
+vw vh등의 viewport에 따른 상대단위가 별도로 존재한다.
 
-5) id 값은 유일해야 하므로 중복되어서는 안된다. F 
-일반적으로 하나의 문서에 1번만 사용, 여러 번 사용해도 동작하지만, 단일 id를 사용하는 것을 권장
+5) id 값은 유일해야 하므로 중복되어서는 안된다. T
 ```
 
 
@@ -93,6 +96,6 @@ WHATWG에서 HTML Living Standard를 만든다.
 ```
 
 ``` python
-!important > 인라인 > id > class > 속성, pseudo-class > 요소,pseudo-element
+!important > Inline style > id > class 선택자 > 요소 선택자 > 소스 순서 
 ```
 

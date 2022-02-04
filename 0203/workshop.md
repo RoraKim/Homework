@@ -9,7 +9,9 @@
 ![image-20220203154535349](workshop.assets/image-20220203154535349.png)
 
 ``` html
-<img src="c:\Users\Windos 10\Desktop\TIL\ssafy\image" alt="Ssafy">
+<a href="">
+	<img src="c:\Users\Windos 10\Desktop\TIL\ssafy\image" alt="Ssafy">
+</a>
 ```
 
 
@@ -29,7 +31,9 @@ b) 상대경로
 
 
 ``` html
-<img src="../image/my_photo.jpg" alt="Ssafy">
+<a href="">
+    <img src="../image/my_photo.jpg" alt="Ssafy">
+</a>    
 ```
 
 
@@ -68,7 +72,7 @@ b) 상대경로
 }
 ```
 
-![image-20220203173809850](workshop.assets/image-20220203173809850.png)
+
 
 #### 2) nth-child를 nth-of-type으로 변경하고 결과를 확인 하시오.
 
@@ -87,3 +91,9 @@ ssafy라는 id를 가진 태그의 두번째 자식이 p태그이면 해당 태�
 
 
 ssafy라는 id를 가진 태그 자식들 중에 두번째로 나오는 p태그에 css 적용을 하는 것이다. 
+
+
+
+1. element :nth-child(n)
+   - 부모의 n번째 자식을 찾고 해당 element를 선택
+   - 
