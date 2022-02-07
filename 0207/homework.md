@@ -16,9 +16,9 @@ btn btn-success
 
 ![image-20220207173543813](homework.assets/image-20220207173543813.png)
 
-a : light
+a : dark
 
-b :  navbarSupportedContent
+b :  navbar-nav
 
 c: navbar-nav me-auto mb-2 mb-lg-0
 
