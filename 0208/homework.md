@@ -6,10 +6,10 @@ main axis의 기준 방향을 설정한다.
 
 
 
-1) row  x축을 기준으로 왼쪽부터 오른쪽 방향으로 
-2) row_reverse x축을 기준으로 오른쪽에서 왼쪽 방향으로 
-3) column y축을 기준으로 위쪽부터 아래쪽 방향으로 
-4) column_reverse y축을 기준으로 아래에서 위로
+1) row  : 주축을 가로로, 오른쪽 방향으로 
+2) row_reverse : 주축을 가로로, 오른쪽에서 왼쪽 방향으로 
+3) column : 주축을 세로로, 위쪽부터 아래쪽 방향으로 
+4) column_reverse : 주축을 세로로, 아래에서 위로
 
 ``` html
 <div class="flex_container flex direction : row">
@@ -49,10 +49,10 @@ main axis의 기준 방향을 설정한다.
 
 ####  flex-direction의 4가지 요소와 대응하는 bootstrap 클래스를 작성하시오.
 
-1) row  : d-flex flex-row
-2) row_reverse  : d-flex flex-row-reverse
-3) column : d-flex flex-column
-4) column_reverse : d-flex flex-column-reverse
+1) row  : flex-row
+2) row_reverse  : flex-row-reverse
+3) column : flex-column
+4) column_reverse : flex-column-reverse
 
 ``` html
 <article class="d-flex">
@@ -73,18 +73,23 @@ main axis의 기준 방향을 설정한다.
 
 align-items와 align-content
 
+
+
 align-content : 여러 줄들 사이의 간격을 지정(공간 나누기 개념)
 
 align-items : 컨테이너 안에서 어떻게 모든 요소들이 정렬하는지를 지정(정렬 개념)
 
+
+
 모든 아이템을 cross axis 기준으로 정렬
 
-1. stretch : 여러 줄을 컨테이너에 맞도록 늘임
-2. flex-start : 여러줄들을 컨테이너의 꼭대기에 정렬
-3. flex-end : 여러 줄들을 컨테이너의 바닥에 정렬
-4. center : 여러줄들을 세로선 상의 가운데에 정렬
+1. stretch : 부모 flex 컨테이너의 최대 높이로 설정 , 여러 줄을 컨테이너에 맞도록 늘임
+2. flex-start : 교차축 방향의 시작선에 정렬, 여러줄들을 컨테이너의 꼭대기에 정렬
+3. flex-end : 교차축 방향의 끝에 정렬, 여러 줄들을 컨테이너의 바닥에 정렬
+4. center : 교차축의 중앙에 정렬 여러줄들을 세로선 상의 가운데에 정렬
 5. space-between : 여러 줄들 사이에서 동일한 간격을 둔다
 6. space-around : 여러 줄들 주위에 동일한 간격을 둔다  
+7. baseline 
 
 ``` html
 align-content: flex-start;
@@ -107,7 +112,7 @@ align-content: flex-start;
 (4) justify-content, align-items
 ```
 
-
+(1) flex-flow row, wrap
 
 ---
 
@@ -127,3 +132,10 @@ align-content: flex-start;
 </div>
 ```
 
+(a) : container - 컴테이너를 통해 얻을 수 있는 것 브레이크 포인트 들어갈 수 있음
+
+(b) : row
+
+(c) : sm, md, lg, xl, xxl : 디바이스나 화면의 크기에 따라서 반응형으로 디자인 구현 가능하도록 하는 역할
+
+(d) : 12 이하의 정수 : 공간을 12개로 나누어서 해당 요소가 몇칸을 차지할 것인지를 정의 
