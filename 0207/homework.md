@@ -10,6 +10,12 @@ Component를 활용하여 물음에 답하시오.
 
 btn btn-success
 
+클래스가 두개 작성된 형태
+
+![image-20220208091021502](homework.assets/image-20220208091021502.png)
+
+
+
 
 
 #### 2. Components
@@ -18,7 +24,9 @@ btn btn-success
 
 a : dark
 
-b :  navbar-nav
+navbar 테마 다크 백그라운드 다크 
+
+b :  navbarsupportedcontent
 
 c: navbar-nav me-auto mb-2 mb-lg-0
 
