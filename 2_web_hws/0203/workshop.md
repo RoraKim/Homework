@@ -72,7 +72,9 @@ b) 상대경로
 }
 ```
 
+#ssafy : id: ssafy의 p태그
 
+![image-20220210223015601](workshop.assets/image-20220210223015601.png)
 
 #### 2) nth-child를 nth-of-type으로 변경하고 결과를 확인 하시오.
 
@@ -96,4 +98,9 @@ ssafy라는 id를 가진 태그 자식들 중에 두번째로 나오는 p태그�
 
 1. element :nth-child(n)
    - 부모의 n번째 자식을 찾고 해당 element를 선택
-   - 
+   - 다른 element 모두 자식으로 선택해서 그 자식들 중에 n번째를 찾는다. 
+   - n번째 자식이 지정한 element면 적용
+   - n번째 자식이 선택한 element가 아니라면 스타일이 적용되지 않는다
+2. element:nth-of-type(n)
+   - n번째로 나오는 element에 한해 스타일 적용
+   - element가 n개 이하로 나온다면 적용되지 않음

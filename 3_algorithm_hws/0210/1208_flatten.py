@@ -30,3 +30,12 @@ for tc in range(1, 11):
 
         if dump_num == 0:
             print(max_box - min_box)
+
+
+            -------------------------------------------------------------
+            h_cnt = [0] * 101
+            min_v = 101
+            max_v = 0
+
+            박스의 높이를 카운트 하면서 h_cnt 최고점과 최저점을 찾기
+            for i in range(100):
