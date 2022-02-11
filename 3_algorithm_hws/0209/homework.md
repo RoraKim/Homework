@@ -1,0 +1,3 @@
+![image-20220211093129475](homework.assets/image-20220211093129475.png)
+
+![image-20220211093210420](homework.assets/image-20220211093210420.png)
