@@ -5,14 +5,16 @@ t = int(input())
 
 for i in range(t):
     tc, n = input().split()
-    words = input().split()
-    numbers = ["ZRO", "ONE", "TWO", "THR", "FOR", "FIV", "SIX", "SVN", "EGT", "NIN"]
+    arr = list(map(str, input().split()))
+    nums = ["ZRO", "ONE", "TWO", "THR", "FOR", "FIV", "SIX", "SVN", "EGT", "NIN"]
 
     result = []
-    for number in numbers:
-        for word in words:
-            if word == number:
+    for number in nums:
+        for i in arr:
+            if i == number:
                 #앞에서부터 비교하며 같은 값이 나오면 result에 더해줌
-                result.append(number)
+
+                result.append(i)
+                arr.remove(i)
 
     print(f'{tc}',' '.join(map(str,result)))
