@@ -35,7 +35,7 @@ for tc in range(1, t+1):
     #j가 sub 끝 인덱스까지 갔다는 것은 마지막 비교에서도 j가 1 증가했다는 것을 의미함
     #즉 마지막 글자까지 일치했다는 뜻
     if j == n:
-        print(f'#{tc} 1')
+        # print(f'#{tc} 1')
     else:
         print(f'#{tc} 0')
 
