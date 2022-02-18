@@ -9,6 +9,8 @@ for i in range(t):
     nums = ["ZRO", "ONE", "TWO", "THR", "FOR", "FIV", "SIX", "SVN", "EGT", "NIN"]
 
     result = []
+    #num은 이미 정렬이 되어있는 상태기 때문에 num을 고정시키고 이중 포문을 돌려
+    #num의 i값과 일치하는 값을 어펜드 한다면 정렬이 된 상태일 것이다.
     for i in nums:
         for j in arr:
             if j == i:
