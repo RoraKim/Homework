@@ -29,4 +29,4 @@ def kmp(t, p):
                 j = lps[j]
         print()
         return
-    
+

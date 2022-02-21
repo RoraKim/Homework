@@ -6,10 +6,6 @@ sys.stdin = open('input.txt')
 dx = [0, 0, 1]
 dy = [-1, 1, 0]
 
-# 델타탐색에 쓸 방향(왼쪽 오른쪽 아래)
-dx = [-1, 1, 0]
-dy = [0, 0, 1]
-
 def ladder_search(x, y):
     # 최초 시작지점
     start_y = y
@@ -41,10 +37,13 @@ def ladder_search(x, y):
 
 arr = [list(map(int, input().split())) for _ in range(10)]
 for j in range(10):
+    #시작점을 찾기 때문에 행은 0으로 고정
     # (0, i)가 1 == 시작지점
+    #맨 첫 줄이 1이면 함수를 실행
     # 모든 시작지점에서
     if arr[0][j] == 1:
         # 도착지점을 찾기위한 탐색 시작
+        #j는 몇번째 시작점에서 출발했는지
         result = ladder_search(0, j)
         if result:
             break
