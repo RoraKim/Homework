@@ -7,7 +7,7 @@ def paper(n):
 
         if n % 2 == 1:
             memo[n] = paper(n - 2) * 4 + 1
-    print(memo)
+    # print(memo)
     return memo[n]
 
 t = int(input())
