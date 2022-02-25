@@ -1,35 +1,68 @@
 
 import sys
 sys.stdin = open('input.txt')
+
 for tc in range(1, 11):
-    N = int(input())
+    n = int(input())
     arr = list(map(int, input().split()))
 
+    # print(arr)
+    summ = 0
+    for i in range(2, n-2):
+        maxx = max(arr[i-2], arr[i-1], arr[i+1], arr[i+2])
+        if arr[i] > maxx:
+            summ += arr[i] - maxx
 
-    view_count = 0
-    for i in range(2, N - 2):
-        max_view = arr[i - 2]
-        if arr[i - 2] > arr[i]:
-            max_view = arr[i - 2]
-
-        if arr[i - 1] > max_view:
-            max_view = arr[i - 1]
-
-        if arr[i + 1] > max_view:
-            max_view = arr[i + 1]
-
-        if arr[i + 2] > max_view:
-            max_view = arr[i + 2]
-
-        if max_view < arr[i]:
-            view_count += arr[i] - max_view
-
-    print(f'#{tc}',view_count)
+    print(f'#{tc}',summ)
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# for tc in range(1, 11):
+#     N = int(input())
+#     arr = list(map(int, input().split()))
+#
+#
+#     view_count = 0
+#     for i in range(2, N - 2):
+#         max_view = arr[i - 2]
+#         if arr[i - 2] > arr[i]:
+#             max_view = arr[i - 2]
+#
+#         if arr[i - 1] > max_view:
+#             max_view = arr[i - 1]
+#
+#         if arr[i + 1] > max_view:
+#             max_view = arr[i + 1]
+#
+#         if arr[i + 2] > max_view:
+#             max_view = arr[i + 2]
+#
+#         if max_view < arr[i]:
+#             view_count += arr[i] - max_view
+#
+#     print(f'#{tc}',view_count)
+#
+#
+#
+#
+#
 
 
 

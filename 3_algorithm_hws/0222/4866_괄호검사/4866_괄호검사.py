@@ -1,5 +1,6 @@
 import sys; sys.stdin = open('4866_괄호검사.txt')
 
+
 class Stack:
     def __init__(self, size):
         self.size = size
@@ -23,6 +24,11 @@ class Stack:
         else:
             return False
 
+def len(arr):
+    cnt = 0
+    for i in arr:
+        cnt += 1
+    return cnt
 
 def remove_match(n):
     s1 = Stack(n)
@@ -30,10 +36,12 @@ def remove_match(n):
         #필요한 문자는 stack에 넣는다
         if words[i] in ('{','}','(',')'):
             s1.push(words[i])
+        # print(s1.arr)
 
         # 현재 top 직전의 문자와 현재의 문자가 짝을 이루는 괄호라면
         if s1.arr[s1.top - 1] == '(':
             if words[i] == ')':
+                #앞의 if문 때문에 현재의 i도 push되어있는 상태
                 #현재 문자도 pop
                 s1.pop()
                 #짝을 이루는 앞 문자도 pop
