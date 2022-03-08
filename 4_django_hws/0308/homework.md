@@ -49,8 +49,17 @@ $ python manage.py shell_plus #django-extensions 설치 후, settings.py에 djan
 
 
 
-
-
 ### Django Model Field
 
 Django에서 Model을 정의할 때 사용할 수 있는 필드 타입을 5가지 이상 작성하시오.
+
+```bash
+from django.db import models
+
+models.CharField
+models.TextField
+models.DateTimeField
+models.IntergerField
+models.fileField
+```
+
