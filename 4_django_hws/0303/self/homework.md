@@ -29,8 +29,8 @@ from djaingo.urls import path
 from pages import views
 
 urlpatterns = [
-    path(__(a)___)
-    path('admin/', admin,site,urls)
+    path(__(a)___),
+    path('admin/', admin,site,urls),
 ]
 ```
 
@@ -58,7 +58,8 @@ urlpatterns = [
 
 
 2. post  리스트를 반복문을 활용하여 0번 글 부터 출력하시오
-   - forloop.counter()
+   - forloop.counter0 - 0부터 출력
+   - forloop.counter - 1부터 출력
 
 ```python
 {% for post in posts %}
@@ -100,6 +101,8 @@ urlpatterns = [
 ```python
 <!-- 5 -->
 <p>{{ 'hello'|length}}</p>
+
+<!--My Name Is Tom-->
 <p>{{ 'my name is tom'|title}}</p>
 ```
 
@@ -110,7 +113,8 @@ urlpatterns = [
 `y년 m월 d일 (D) A h : i`
 
 ```python
-{{ today|data:"" }}
+<!-- 2020년 02월 02일 (sun) PM 02:02 -->
+{{ today|data:"__(a)__" }}
 ```
 
 ---

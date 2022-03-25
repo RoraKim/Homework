@@ -7,7 +7,7 @@ Django는 MTV 디자인 패턴으로 이루어진 Web Framework이다. 여기서
 
 - model(데이터 베이스를 관리) - model 
   - 어플리케이션의 데이터 구조를 정의하고 데이터 베이스의 기록을 관리(조회, 생성, 수정, 삭제)
-- teplate(인터페이스, 화면) - View
+- template(인터페이스, 화면) - View
   - 파일의 구조나 레이아웃을 정의 
   - 실제 사용자에게 보여줄 화면
 - View(중심 컨트롤러) - controller
