@@ -1,52 +1,76 @@
-array = [5, 7, 9, 0, 3, 1, 6, 2, 4, 8]
-def quick_sort(array, start, end):
-    if start >= end: #원소가 한개라는 뜻
-        return #함수 종료
-    #첫번째 원소를 pivot으로 설정
-    pivot = start
-    #첫번째 원소를 제외하고 가장 왼쪽원소를 left
-    left = start + 1
-    #가장 오른쪽 원소를 right
-    right = end
-    #엇갈릴때까지 반복
-    while(left <= right):
-        #피벗보다 큰 데이터를 찾을때 까지 반복
-        while(left<= end and array[left] <= array[pivot]):
-            left += 1
-        #피벗보다 작은 데이터를 찾을때 까지 반복
-        while(right > start and array[right] >= array[pivot]):
-            right -= 1
 
-        if left > right: #엇갈렸다면 작은 데이터와 피벗을 교체
-            array[right], array[pivot] = array[pivot], array[right]
+import sys; sys.stdin = open('병합정렬.txt')
 
-        else: #엇갈리지 않았다면 작은 데이터와 큰 데이터를 교체
-            array[right], array[left] = array[left], array[right]
+def merge(left, right):
+    # 뉴 배열..
+    result = []
 
-    #분할 이후 왼쪽 부분과 오른쪽 부분에서 각각 정렬 수행
-    quick_sort(array, start, right -1)
-    quick_sort(array, right +1, end)
+    # 이미 정렬된 배열 두개 비교하면서 인덱스 옮겨서 넣기
+    # i -> 왼쪽 확인할 인덱스, j -> 오른쪽 확인..
+    i = j = 0
 
-print(array) #[5, 7, 9, 0, 3, 1, 6, 2, 4, 8]
-quick_sort(array, 0, len(array) - 1)
-print(array) # [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    # left[i] right[j] 얘네 두개 비교할거다!
+    while i < len(left) or j < len(right):
+
+        # left랑 right  둘 다 요소가 남아있을때만 가능 ..
+        if i < len(left) and j < len(right):
+            # 더 작은쪽 가져와서 append
+            # 가져온 쪽 인덱스 +1 시켜준다..
+            if left[i] < right[j]:
+                result.append(left[i])
+                i += 1
+            else:
+                result.append(right[j])
+                j += 1
+        else:
+            # 비교할 요소가 없는 상황!!!!!!!!
+            # 1. 왼쪽만 남아있음
+            if i < len(left):
+                result.append(left[i])
+                i += 1
+            else:
+                # 2. 오른쪽만 남아있음
+                result.append(right[j])
+                j += 1
+
+    #쪼개진 값들이 정렬된 상태로 넘어감
+    return result
 
 
-array = [5, 7, 9, 0, 3, 1, 6, 2, 4, 8]
-def quick_sort(array):
-    #리스트가 하나 이하의 원소만을 담고 있다면 종료
-    if len(array) <= 1:
-        return array
-    #피벗은 첫번째 원소
-    pivot = array[0]
-    # 피벗을 제외한 리스트
-    tail = array[1:]
+def merge_sort(list):
 
-    left_side = [x for x in tail if x <= pivot] #분할된 왼쪽 부분
-    right_side = [x for x in tail if x > pivot] #분할된 오른쪽 부분
+    global cnt
 
-    # 분할 이후 왼쪽 부분과 오른쪽 부분에서 각각 정렬 수행하고 전체 리스트 반환
-    return quick_sort(left_side) + [pivot] + quick_sort(right_side)
+    #더이상 list를 쪼갤 수 없으면
+    if len(list) <= 1:
+        return list
+    #중앙값
+    mid = len(list) // 2
+    #left, right로 쪼개주기
+    leftList = list[:mid]
+    rightList = list[mid:]
 
-print(array)
-print(quick_sort(array))
+    #각 각 나눠서 merge_sort 실시
+    leftList = merge_sort(leftList)
+    rightList = merge_sort(rightList)
+    #반 나눈애들끼리 맨 오른쪽 요소 비교
+    if leftList[-1] > rightList[-1]:
+        cnt += 1
+    return merge(leftList, rightList)
+
+
+
+t = int(input())
+for tc in range(1, t+1):
+    n = int(input())
+    array = list(map(int, input().split()))
+    cnt = 0
+
+    sorted_array = merge_sort(array)
+    # print(sorted_array)
+    print(f'#{tc} {sorted_array[n//2]}', end=' ')
+    print(cnt)
+
+
+
+
