@@ -22,9 +22,11 @@ def dfs(n, summ): #n은 dfs의 깊이, summ은 계산될때 마다 넘겨받는 
         for i in range(length):
             #그 중 0인 것이 있다면
             if not visited[i]:
+                #방문 처리
                 visited[i] = 1
                 #arr[제품][공장]
                 dfs(n + 1, summ + arr[i][n])
+                #재귀 끝나고 visited는 0으로 바꿔줌
                 visited[i] = 0
 
 
