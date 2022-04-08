@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% comment %} 게시글 모두를 보여줄 수 있는 정보를 여기 담는다 
+ariticle이 가지고 있는 정보를 template에게 넘겨줄 수 있는 과정이 필요{% endcomment %}
+{% block content %}
+<h1>INDEX PAGE</h1>
+<a href="">create</a>
+
+{% comment %} 
+dtl
+{% endcomment %}
+
+
+{% for article in articles  %}
+{% comment %} html에서는 모든 문자열을 그대로 문자열로 보여준다. dtl변수를 보여주고 싶다면 진자 표현 {% endcomment %}
+<p>{{ article.pk }}</p>
+<p>{{ aritlce.title }}</p>
+
+{% endfor %}
+
+{% endblock content %}
