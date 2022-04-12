@@ -11,6 +11,8 @@
   https://github.com/django/django
 
 ```python
+어느 폴더 어느 파일의 어느 메서드인지
+
 class User(AbstractUser):
     """
     Users within the Django authentication system are represented by this
@@ -22,7 +24,7 @@ class User(AbstractUser):
         swappable = "AUTH_USER_MODEL"
 ```
 
-
+![image-20220412091432573](homework.assets/image-20220412091432573.png)
 
 
 
@@ -30,7 +32,9 @@ class User(AbstractUser):
 
 새 유저를 생성하는 Django 내부에 정의된 ModelForm을 사용하기 위한 import 구문을 작성하시오.
 
-
+```python
+from django.contrib.auth.forms import usercreationForm
+```
 
 
 
@@ -40,5 +44,9 @@ Django는 사용자가 로그인에 성공할 경우 (a) 테이블에 세션 데
 그리고 브라우저의 쿠키에 세션 값이 발급되는데 이 세션 값의 key 이름은 (b)다.
 (a)와 (b)에 알맞은 값을 작성하시오.
 
-django_session
+a : django_session
+
+b : sessionid
+
+
 
