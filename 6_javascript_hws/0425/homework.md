@@ -64,6 +64,25 @@ const numbers = [1, 2, 3, 4, 5]
       addNumbers.push(num + 10)
   }
   console.log(addNumbers)
+  
+  
+  const addNumbers = []
+  for (const num of numbers) {
+      addNumbers.push(num + 10)
+  }
+  console.log(addNumbers)
+  
+  
+  const numbers = [1, 2, 3, 4, 5]
+  undefined
+  const addNumbers = []
+  undefined
+  for (const num of numbers) {
+      addNumbers.push(num + 10)
+  }
+  5
+  console.log(addNumbers)
+  VM844:1 (5) [11, 12, 13, 14, 15]
   ```
 
   

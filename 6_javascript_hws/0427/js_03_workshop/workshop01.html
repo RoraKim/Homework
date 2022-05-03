@@ -24,6 +24,14 @@
         2) a 태그의 href 속성은 https://google.com/ 입니다.
         3) a 태그의 target 속성은 _blank 입니다. (새 탭에서 열기)
     */
+   //1. 선택 
+   const myAtag = document.querySelector('#anchor')
+    //2. 조작
+    //클래스 추가 
+    myAtag.classList.add('text-decoration-none')
+    myAtag.setAttribute('herf','https://google.com/')
+    // myAtag.href = 'https//naver.com'
+    myAtag.setAttribute('targer','_blank')
 
   </script>
 </body>
