@@ -28,8 +28,10 @@ hash 모드가 존재
 그래서 history 모드 사용
 
 - HTML 5 history API(Web API)
+
 - history.go()
-- 
+
+  
 
 
 
